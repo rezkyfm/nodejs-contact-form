@@ -31,4 +31,4 @@ module.exports = {
 };
 ```
 
-For more message confituratio visit [Nodemailer Message Configuration](https://nodemailer.com/message/)
+For more message configuration visit [Nodemailer Message Configuration](https://nodemailer.com/message/)
