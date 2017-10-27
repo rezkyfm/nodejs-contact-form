@@ -26,7 +26,7 @@ module.exports = {
 
   //Email Message
   from: '"Contact Me" <noreply@example.com>', // Sender address
-  to: 'youremail@.com', // List of receivers
+  to: 'youremail@example.com', // List of receivers
   subject: 'Contact Us', // Subject
 };
 ```
