@@ -4,8 +4,9 @@ Contact form build with UIkit and Nodemailer
 ### Installation
 Install the dependencies and start the server.
 ```sh
-$ npm install
-$ npm run start
+$ git clone https://github.com/rezkyfm/nodejs-contact-form.git
+$ cd nodejs-contact-form
+$ npm install && npm start
 ```
 
 ### Configuration
