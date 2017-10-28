@@ -1,3 +1,7 @@
+/* 
+config.js
+*/
+
 module.exports = {
   //Theme
   theme: "lightBlue",
