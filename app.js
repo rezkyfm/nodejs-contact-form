@@ -5,7 +5,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
 
-const config = require('./configTest');
+const config = require('./config');
 
 //Set Package
 const app = express();
