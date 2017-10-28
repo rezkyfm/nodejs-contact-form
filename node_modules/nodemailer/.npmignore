@@ -1,0 +1,8 @@
+assets
+test
+examples
+.eslintrc
+.gitignore
+.travis.yml
+Gruntfile.js
+.github/
