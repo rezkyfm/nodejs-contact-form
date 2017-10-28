@@ -31,5 +31,3 @@ module.exports = {
   subject: 'Contact Us', // Subject
 };
 ```
-
-For more message configuration visit [Nodemailer Message Configuration](https://nodemailer.com/message/)
