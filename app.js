@@ -70,10 +70,10 @@ app.post('/send', (req, res) => {
     let transporter = nodemailer.createTransport({
         host:  account.smtp.host,
         port: account.smtp.port,
-        secure: account.smtp.secure,
+        secure: false,
         auth: {
             user: account.user,
-            pass: account.pass
+            pass: account.pass,
         },
         tls:{
           rejectUnauthorized:false
@@ -90,11 +90,10 @@ app.post('/send', (req, res) => {
 
       // send mail with defined transport object
       transporter.sendMail(mailOptions, (error, info) => {
-          if (error) {
-              res.render(config.theme, {msg: failAlert});
-          }
-
-          res.render(config.theme, {msg: successAlert});
+        if (error) {
+          res.render(config.theme, {msg: failAlert});
+        }
+        res.render(config.theme, {msg: successAlert});
       });
-    }
+    })
   });
