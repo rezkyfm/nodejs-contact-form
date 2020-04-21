@@ -1,0 +1,126 @@
+/* ==================================
+    Main Style
+================================== */
+
+body {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)
+      ),
+      url('../img/blue-and-purple-cosmic-sky.jpg');
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+}
+
+a i {
+    color: #FFFFFF;
+}
+
+a i:hover {
+    color: #00adb5;
+    -webkit-transition: color .2s;
+    -moz-transition: color .2s;
+    -o-transition: color .2s;
+    -ms-transition: color .2s;
+    transition: color .2s;
+}
+
+/* ==================================
+    Container
+================================== */
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+/* ==================================
+    Left Column
+================================== */
+
+.left-column {
+    background-color: #222831;
+    border-top: 10px solid #00adb5;
+    color: #FFFFFF;
+    padding: 20px 20px 0 20px;
+}
+
+/* Tittle */
+.tittle-container {
+    margin-bottom: 30px;
+}
+
+.tittle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 10px auto; 
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin: 0 auto;
+}
+
+/* Form */
+.col-form-label {
+    font-size: 0.9rem;
+}
+
+.form-control-sm {
+    border-radius: 0;
+}
+
+/* Button */
+.btn-submit {
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    color: #222831;
+    font-size: 0.9rem;
+    text-transform: none;
+    transition: background-color .8s;
+}
+
+.btn-submit:hover {
+    background-color: #00adb5;
+    -webkit-transition: background-color .8s;
+    -moz-transition: background-color .8s;
+    -o-transition: background-color .8s;
+    -ms-transition: background-color .8s;
+    transition: background-color .8s;
+}
+
+.social {
+    padding: 30px 0;
+}
+
+.icon {
+    margin: 0 10px;
+}
+
+/* ==================================
+    Right Column
+================================== */
+
+.right-column {
+    background-color: #FFFFFF;
+    border-top: 10px solid #00adb5;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+/* ==================================
+    Responsive
+================================== */
+
+@media screen and (max-width: 576px) {
+    .container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

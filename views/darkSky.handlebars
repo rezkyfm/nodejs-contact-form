@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Meta Tag -->
+        <meta charset="utf-8">
+        <meta name="description" content="Contact Form">
+        <meta name="keywords" content="Nodejs,UIkit,Nodemailer,Expressjs">
+        <meta name="author" content="Author">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title -->
+        <title>Contact Us</title>
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,500" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="/public/css/darkSky.css">
+        <link rel="stylesheet" href="/public/css/fontawesome.min.css">
+        
+    </head>
+    <body>
+
+        <!-- Container -->
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <!-- Left Column -->
+                <div class="col-lg-4 left-column">
+
+                    <div class="tittle-container">
+                        <h2 class="tittle">Get in Touch</h2>
+                        <h4 class="subtitle">We'd love hear from you</h4>
+                    </div>
+
+                    <!-- Form -->
+                    <form class="contact-form" method="POST" action="send">
+                        {{{msg}}}
+
+                            <!-- Name -->
+                            <div class="form-group row">
+                                <label class="col-lg-4 col-form-label">Your Name</label>
+                                <div class="col-lg-8">
+                                    <input type="text" name="name" class="form-control form-control-sm">
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group row">
+                                <label class="col-lg-4 col-form-label">Email Adress</label>
+                                <div class="col-lg-8">
+                                    <input type="email" name="email" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            
+                            <!-- Message -->
+                            <div class="form-group row">
+                                <label class="col-lg-4 col-form-label">Message</label>
+                                <div class="col-lg-8">
+                                    <textarea class="form-control form-control-sm" name="message" rows="5" required></textarea>
+                                </div>
+                                    
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-right">
+                                <input class="btn btn-submit" type="submit" value="Submit">
+                            </div>
+
+                    </form>
+
+                    <!-- Social -->
+                    <div class="social">
+                        <div class="text-center center-block">
+                            <a href="#"><i class="icon fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="icon fab fa-twitter"></i></i></a>
+                            <a href="#"><i class="icon fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Left Column -->
+
+                <!-- Right Column -->
+
+                <div class="col-lg-6 right-column embed-responsive embed-responsive-16by9">
+                    <div id="map" class="embed-responsive-item"></div>
+                </div>
+
+                <!-- End Right Coloumn -->
+
+            </div>
+        </div>
+        
+        <!-- JavaScript -->
+        <script>
+            var map;
+            function initMap() {
+                var myLatLng = {lat: 48.8583701, lng: 2.2944813};
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                disableDefaultUI: true,
+                center: myLatLng,
+                styles: [
+                    {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                    {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                    {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                    {
+                    featureType: 'administrative.locality',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                    },
+                    {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                    },
+                    {
+                    featureType: 'poi.park',
+                    elementType: 'geometry',
+                    stylers: [{color: '#263c3f'}]
+                    },
+                    {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#6b9a76'}]
+                    },
+                    {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{color: '#38414e'}]
+                    },
+                    {
+                    featureType: 'road',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#212a37'}]
+                    },
+                    {
+                    featureType: 'road',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#9ca5b3'}]
+                    },
+                    {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{color: '#746855'}]
+                    },
+                    {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#1f2835'}]
+                    },
+                    {
+                    featureType: 'road.highway',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#f3d19c'}]
+                    },
+                    {
+                    featureType: 'transit',
+                    elementType: 'geometry',
+                    stylers: [{color: '#2f3948'}]
+                    },
+                    {
+                    featureType: 'transit.station',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                    },
+                    {
+                    featureType: 'water',
+                    elementType: 'geometry',
+                    stylers: [{color: '#17263c'}]
+                    },
+                    {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#515c6d'}]
+                    },
+                    {
+                    featureType: 'water',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{color: '#17263c'}]
+                    }
+                ]
+                });
+
+                var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Hello'
+                });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key={your_api_key}&callback=initMap" async defer></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </body>
+</html>

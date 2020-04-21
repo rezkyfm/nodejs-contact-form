@@ -1,0 +1,122 @@
+/* ==================================
+    Main Style
+================================== */
+
+body, html {
+    background-color: #f7f7fd;
+    font-family: 'Raleway', sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ==================================
+    Container
+================================== */
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* ==================================
+    Left Column
+================================== */
+
+.left-column {
+    background-color: #ffffff;
+    box-shadow: 0 0 6px 0 hsla(0, 0%, 0%, 0.2);
+    /* box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2); */
+    padding: 30px;
+}
+
+/* Tittle */
+.tittle-container {
+    margin: 10px auto 30px auto;
+}
+
+.tittle {
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;
+    color: #38436b; 
+}
+
+.subtitle {
+    font-family: 'Raleway', sans-serif;
+    margin: 0 auto;  
+    color: #c1c5dc;
+}
+
+/* Contact Form*/
+.contact-form {
+    padding: 0 10px;
+}
+
+.form-control-sm {
+    border-radius: 0;
+}
+
+/* Button */
+.btn-submit {
+    text-align: center;
+    background-color: #6e91ff;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-transform: none;
+    transition: background-color .8s;
+    border-radius: 25px;
+}
+
+.btn-submit:hover {
+    background-color: #1c50fc;
+    -webkit-transition: background-color .8s;
+    -moz-transition: background-color .8s;
+    -o-transition: background-color .8s;
+    -ms-transition: background-color .8s;
+    transition: background-color .8s;
+}
+
+/* ==================================
+    Right Column
+================================== */
+
+.right-column {
+    background-color: #6e91ff;
+    box-shadow: 0 0 6px 0 hsla(0, 0%, 0%, 0.2);
+    padding: 20px;
+    color: #ffffff;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-bottom: 50px;
+    padding-left: 30px;
+}
+
+.contact-info h3{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin: 50px auto 30px auto;
+}
+
+/* Social Icons */
+.social {
+    color: #ffffff;
+}
+
+.icon {
+    color: #ffffff;
+    margin: auto 10px;
+}
+
+/* ==================================
+    Responsive
+================================== */
+
+@media screen and (max-width: 576px) {
+    .container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

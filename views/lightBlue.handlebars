@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Meta Tag -->
+        <meta charset="utf-8">
+        <meta name="description" content="Contact Form">
+        <meta name="keywords" content="Nodejs,UIkit,Nodemailer,Expressjs">
+        <meta name="author" content="Author">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Title -->
+        <title>Contact Us</title>
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,500" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="/public/css/lightBlue.css">
+        <link rel="stylesheet" href="/public/css/fontawesome.min.css">
+
+    </head>
+    <body>
+
+        <!-- Container -->
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <!-- Left Column -->
+                <div class="col-lg-6 left-column">
+
+                    <!-- Navbar -->
+                    <ul class="nav">
+                            <li class="nav-item"><a href="#">Home</a></li>
+                    </ul>
+                    
+                    <!-- Contact Form Title -->
+                    <div class="tittle-container text-center">
+                        <h2 class="tittle">Get in Touch</h2>
+                        <h4 class="subtitle">We'd love hear from you</h4>
+                    </div>
+
+                    <!-- Form -->
+                    <form class="contact-form" method="POST" action="send">
+                        {{{msg}}}
+
+                            <!-- Name -->
+                            <div class="form-group row">
+                                <label class="col-lg-4 col-form-label">Your Name</label>
+                                <div class="col-lg-8">
+                                    <input type="text" name="name" class="form-control form-control-sm">
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group row">
+                                <label class="col-lg-4 col-form-label">Email Adress</label>
+                                <div class="col-lg-8">
+                                    <input type="email" name="email" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                            
+                            <!-- Message -->
+                            <div class="form-group row">
+                                <label class="col-lg-4 col-form-label">Message</label>
+                                <div class="col-lg-8">
+                                    <textarea class="form-control form-control-sm" name="message" rows="5" required></textarea>
+                                </div>
+                                    
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-right">
+                                <input class="btn btn-submit" type="submit" value="Submit">
+                            </div>
+
+                    </form>
+                </div>
+                <!-- End Left Coloumn -->
+                
+                <!-- Right Column -->
+                <div class="col-lg-4 right-column">
+                    
+                    <!-- Company Info -->
+                    <div class="contact-info">
+                    <h3>Contact Info</h3>
+                        <p><i class="fas fa-map-marker-alt"></i>&nbsp; 80 Guild Street, London, N7 8EP</p>
+                        <p><i class="fas fa-phone-alt"></i>&nbsp; +44 7700 900041</p>
+                        <p><i class="fas fa-envelope"></i>&nbsp; support@example.com</p>
+                    </div>
+                    
+                    <!-- Social Icons -->
+                    <div class="social">
+                        <div class="text-center center-block">
+                            <a href="#"><i class="icon fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="icon fab fa-twitter"></i></i></a>
+                            <a href="#"><i class="icon fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column -->
+
+            </div>
+        </div>
+        
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    </body>
+</html>
